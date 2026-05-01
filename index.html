@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ntombikayise Faith Sibisi — Data Engineer & Software Developer</title>
+  <title>Ntombikayise Faith Sibisi â€” Data Engineer & Software Developer</title>
   <meta name="description" content="Data Engineer & Full Stack Developer from Soweto, Johannesburg. Building reliable data pipelines and practical applications."/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cabinet+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet"/>
   <style>
@@ -561,7 +561,244 @@
       border-radius: 2px;
     }
 
-    /* EXPERIENCE, EDUCATION, CONTACT styles remain the same (only accent colours updated via :root) */
+    /* EXPERIENCE */
+    .exp-timeline { display: flex; flex-direction: column; gap: 0; }
+
+    .exp-item {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 2rem;
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .exp-item:last-child { border-bottom: 1px solid var(--border); }
+
+    .exp-period {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .exp-org {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .exp-role {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .exp-bullets li {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.7;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .exp-bullets li::before {
+      content: 'â€”';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* EDUCATION */
+    .edu-cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .edu-col-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .edu-item {
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .edu-year {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+
+    .edu-degree {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+    }
+
+    .edu-school {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .edu-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 0.3rem;
+    }
+
+    .edu-status {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--forest);
+      background: #d4edda;
+      border: 1px solid #a8d5b5;
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      margin-top: 0.3rem;
+    }
+
+    .cert-card {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      margin-bottom: 1rem;
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+
+    .cert-card:hover { background: var(--warm); }
+
+    .cert-ico { font-size: 1.8rem; flex-shrink: 0; }
+
+    .cert-issuer {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.2rem;
+    }
+
+    .cert-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+    }
+
+    .cert-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* CONTACT */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .contact-left p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      max-width: 420px;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      border: 1px solid var(--border);
+      margin-bottom: 0.75rem;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .contact-row:hover { background: var(--warm); border-color: var(--ink); }
+
+    .contact-ico { font-size: 1.5rem; flex-shrink: 0; }
+
+    .contact-lbl {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.15rem;
+    }
+
+    .contact-val {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    /* FOOTER */
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 5vw;
+      border-top: 2px solid var(--ink);
+      background: var(--ink);
+    }
+
+    .footer-left {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--paper);
+    }
+
+    .footer-right {
+      font-size: 0.75rem;
+      color: #706860;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-right span { color: var(--accent); }
+
+    /* NAV LIST */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
@@ -603,13 +840,13 @@
   <!-- HERO -->
   <section id="hero">
     <div class="hero-left">
-      <div class="hero-eyebrow">Available for hire · Soweto, Johannesburg</div>
+      <div class="hero-eyebrow">Available for hire Â· Soweto, Johannesburg</div>
       <h1>
         Ntombikayise
         <em>Faith Sibisi</em>
       </h1>
       <p class="hero-desc">
-        <strong>Data Engineer & Full Stack Developer</strong> — building reliable data pipelines, 
+        <strong>Data Engineer & Full Stack Developer</strong> â€” building reliable data pipelines, 
         meaningful applications, and systems that keep data accurate and useful.
         Currently completing my NQF Level 6 in Software Engineering at <strong>WeThinkCode_</strong>.
       </p>
@@ -623,7 +860,7 @@
         <div class="stat-num">2</div>
         <div class="stat-info">
           <div class="stat-title">Industry Certifications</div>
-          <div class="stat-sub">IBM Data Science · FNB Full Stack</div>
+          <div class="stat-sub">IBM Data Science Â· FNB Full Stack</div>
         </div>
       </div>
       <div class="hero-stat-row">
@@ -641,14 +878,14 @@
         </div>
       </div>
       <div class="hero-quote">
-        "I build things that work with data — pipelines that move it reliably, applications that surface it meaningfully, and systems that keep it accurate."
+        "I build things that work with data â€” pipelines that move it reliably, applications that surface it meaningfully, and systems that keep it accurate."
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
-    <div class="eyebrow">01 — About</div>
+    <div class="eyebrow">01 â€” About</div>
     <h2>The person <em>behind the code</em></h2>
     <div class="about-grid">
       <div class="about-body">
@@ -673,7 +910,7 @@
           It uses Python, BeautifulSoup, PostgreSQL, Apache Airflow, and Twilio.
         </p>
         <p>
-          Fluent in English and a native IsiZulu speaker, I’m able to bridge technical work with diverse audiences.
+          Fluent in English and a native IsiZulu speaker, Iâ€™m able to bridge technical work with diverse audiences.
         </p>
       </div>
       <div class="about-sidebar">
@@ -681,7 +918,7 @@
           <div class="sidebar-label">Current Status</div>
           <div class="sidebar-val">
             Open to Opportunities
-            <span>Data Engineering · Full Stack Development · Backend</span>
+            <span>Data Engineering Â· Full Stack Development Â· Backend</span>
           </div>
         </div>
         <div class="sidebar-block">
@@ -701,15 +938,15 @@
         <div class="sidebar-block">
           <div class="sidebar-label">Languages</div>
           <div class="lang-pills">
-            <span class="lang-pill">🇿🇦 English — Fluent</span>
-            <span class="lang-pill">🇿🇦 IsiZulu — Native</span>
+            <span class="lang-pill">ðŸ‡¿ðŸ‡¦ English â€” Fluent</span>
+            <span class="lang-pill">ðŸ‡¿ðŸ‡¦ IsiZulu â€” Native</span>
           </div>
         </div>
         <div class="sidebar-block">
           <div class="sidebar-label">Currently Learning</div>
           <div class="sidebar-val">
-            Advanced Data Pipelines · dbt · Streamlit
-            <span>WeThinkCode_ · 2025–2026</span>
+            Advanced Data Pipelines Â· dbt Â· Streamlit
+            <span>WeThinkCode_ Â· 2025â€“2026</span>
           </div>
         </div>
       </div>
@@ -718,7 +955,7 @@
 
   <!-- SKILLS -->
   <section id="skills">
-    <div class="eyebrow">02 — Skills</div>
+    <div class="eyebrow">02 â€” Skills</div>
     <h2>Technical <em>expertise</em></h2>
     <p class="section-intro">A practical toolkit built through certifications, intensive training, and hands-on projects in data engineering and software development.</p>
     <div class="skills-layout">
@@ -797,15 +1034,15 @@
 
   <!-- PROJECTS -->
   <section id="projects">
-    <div class="eyebrow">03 — Projects</div>
+    <div class="eyebrow">03 â€” Projects</div>
     <h2>What I've <em>built</em></h2>
     <p class="section-intro">Hands-on projects that demonstrate real data engineering and full-stack skills.</p>
 
     <!-- Featured Project -->
     <div class="featured-project">
       <div class="fp-body">
-        <div class="fp-label">⭐ Featured · Data Engineering · Community Impact</div>
-        <div class="fp-title">💧 Amanzi Soweto — Water Outage Alert System</div>
+        <div class="fp-label">â­ Featured Â· Data Engineering Â· Community Impact</div>
+        <div class="fp-title">ðŸ’§ Amanzi Soweto â€” Water Outage Alert System</div>
         <p class="fp-desc">
           End-to-end data pipeline that scrapes Johannesburg Water notices, filters for Soweto suburbs, 
           classifies outage severity, stores data in PostgreSQL, and sends targeted WhatsApp alerts via Twilio.
@@ -821,10 +1058,10 @@
           <span class="fp-tag">Twilio</span>
           <span class="fp-tag">dbt</span>
         </div>
-        <a href="https://github.com/ntombi-hub" target="_blank" class="fp-link">View on GitHub →</a>
+        <a href="https://github.com/ntombi-hub" target="_blank" class="fp-link">View on GitHub â†’</a>
       </div>
       <div class="fp-visual">
-        <div class="fp-icon">💧</div>
+        <div class="fp-icon">ðŸ’§</div>
         <div class="fp-badge">Live Project</div>
       </div>
     </div>
@@ -833,7 +1070,7 @@
     <div class="project-grid">
       <div class="proj-card">
         <div class="proj-num">Project 02</div>
-        <div class="proj-title">🌐 Personal Portfolio</div>
+        <div class="proj-title">ðŸŒ Personal Portfolio</div>
         <p class="proj-desc">This responsive portfolio website built from scratch using HTML, CSS, and JavaScript. Clean, modern, and fully custom.</p>
         <div class="proj-tags">
           <span class="ptag">HTML</span>
@@ -843,7 +1080,7 @@
       </div>
       <div class="proj-card">
         <div class="proj-num">Project 03</div>
-        <div class="proj-title">📊 Data Pipeline Projects</div>
+        <div class="proj-title">ðŸ“Š Data Pipeline Projects</div>
         <p class="proj-desc">Additional ETL, automation, and data transformation projects. Check my GitHub for the latest work and source code.</p>
         <div class="proj-tags">
           <span class="ptag">Python</span>
@@ -857,14 +1094,14 @@
 
   <!-- EXPERIENCE -->
   <section id="experience">
-    <div class="eyebrow">04 — Experience</div>
+    <div class="eyebrow">04 â€” Experience</div>
     <h2>Work <em>history</em></h2>
     <p class="section-intro">Roles that built strong foundations in data accuracy, communication, and structured problem-solving.</p>
 
     <div class="exp-timeline">
       <div class="exp-item">
         <div class="exp-meta">
-          <div class="exp-period">2025 — 2026</div>
+          <div class="exp-period">2025 â€” 2026</div>
           <div class="exp-org">WeThinkCode_<br/>Johannesburg</div>
         </div>
         <div class="exp-body">
@@ -879,13 +1116,13 @@
 
       <div class="exp-item">
         <div class="exp-meta">
-          <div class="exp-period">Nov 2021 — Aug 2022</div>
-          <div class="exp-org">Bankile Primary School · Gauteng Dept of Education</div>
+          <div class="exp-period">Nov 2021 â€” Aug 2022</div>
+          <div class="exp-org">Bankile Primary School Â· Gauteng Dept of Education</div>
         </div>
         <div class="exp-body">
           <div class="exp-role">Teacher Assistant</div>
           <ul class="exp-bullets">
-            <li>Translated complex concepts for learners at different levels — strengthening ability to communicate technical ideas clearly</li>
+            <li>Translated complex concepts for learners at different levels â€” strengthening ability to communicate technical ideas clearly</li>
             <li>Maintained accurate student records with strong attention to data integrity</li>
             <li>Developed patience, adaptability, and stakeholder communication skills</li>
           </ul>
@@ -894,8 +1131,8 @@
 
       <div class="exp-item">
         <div class="exp-meta">
-          <div class="exp-period">Feb 2021 — Sep 2021</div>
-          <div class="exp-org">Dial A Stocktaker · Johannesburg</div>
+          <div class="exp-period">Feb 2021 â€” Sep 2021</div>
+          <div class="exp-org">Dial A Stocktaker Â· Johannesburg</div>
         </div>
         <div class="exp-body">
           <div class="exp-role">Scanner / Data Entry Specialist</div>
@@ -912,7 +1149,7 @@
 
   <!-- EDUCATION & CERTIFICATIONS -->
   <section id="education">
-    <div class="eyebrow">05 — Education & Certifications</div>
+    <div class="eyebrow">05 â€” Education & Certifications</div>
     <h2>Academic <em>foundation</em></h2>
     <p class="section-intro">Strong academic background combined with industry-recognised certifications in data and software development.</p>
 
@@ -921,22 +1158,22 @@
         <div class="edu-col-label">Formal Qualifications</div>
 
         <div class="edu-item">
-          <div class="edu-year">2025 – 2026</div>
-          <div class="edu-degree">NQF Level 6 — Software Engineering</div>
-          <div class="edu-school">WeThinkCode_ · Johannesburg</div>
+          <div class="edu-year">2025 â€“ 2026</div>
+          <div class="edu-degree">NQF Level 6 â€” Software Engineering</div>
+          <div class="edu-school">WeThinkCode_ Â· Johannesburg</div>
           <div class="edu-note">Rigorous programme covering software engineering essentials, databases, web development, and AI.</div>
           <div class="edu-status">Completing May 2026</div>
         </div>
 
         <div class="edu-item">
           <div class="edu-year">2025</div>
-          <div class="edu-degree">Certificate of Achievement — Software Engineering & AI</div>
-          <div class="edu-school">Power Learn Project · Nairobi</div>
+          <div class="edu-degree">Certificate of Achievement â€” Software Engineering & AI</div>
+          <div class="edu-school">Power Learn Project Â· Nairobi</div>
           <div class="edu-note">Modules included Python, Database Design with SQL, Web Development, and AI for Software Engineering.</div>
         </div>
 
         <div class="edu-item">
-          <div class="edu-year">2023 – 2025</div>
+          <div class="edu-year">2023 â€“ 2025</div>
           <div class="edu-degree">Higher Certificate in Accounting Sciences</div>
           <div class="edu-school">University of South Africa (UNISA)</div>
           <div class="edu-note">Built analytical thinking and structured data handling skills.</div>
@@ -945,7 +1182,7 @@
         <div class="edu-item">
           <div class="edu-year">2020</div>
           <div class="edu-degree">National Senior Certificate</div>
-          <div class="edu-school">Senaoane Secondary School · Soweto</div>
+          <div class="edu-school">Senaoane Secondary School Â· Soweto</div>
         </div>
       </div>
 
@@ -953,7 +1190,7 @@
         <div class="edu-col-label">Industry Certifications</div>
 
         <div class="cert-card">
-          <div class="cert-ico">📊</div>
+          <div class="cert-ico">ðŸ“Š</div>
           <div>
             <div class="cert-issuer">IBM</div>
             <div class="cert-name">Data Science Certification</div>
@@ -962,7 +1199,7 @@
         </div>
 
         <div class="cert-card">
-          <div class="cert-ico">💻</div>
+          <div class="cert-ico">ðŸ’»</div>
           <div>
             <div class="cert-issuer">FNB App Academy</div>
             <div class="cert-name">Full Stack Development Certification</div>
@@ -971,7 +1208,7 @@
         </div>
 
         <div class="cert-card">
-          <div class="cert-ico">🔐</div>
+          <div class="cert-ico">ðŸ”</div>
           <div>
             <div class="cert-issuer">Additional Training</div>
             <div class="cert-name">Cybersecurity Fundamentals</div>
@@ -986,11 +1223,11 @@
   <section id="contact">
     <div class="contact-layout">
       <div class="contact-left">
-        <div class="eyebrow">06 — Contact</div>
+        <div class="eyebrow">06 â€” Contact</div>
         <h2>Let's <em>work together</em></h2>
         <p>
           I'm actively seeking roles in data engineering, backend development, or full-stack positions.
-          If you value clean code, reliable data pipelines, and practical problem-solving — I'd love to connect.
+          If you value clean code, reliable data pipelines, and practical problem-solving â€” I'd love to connect.
         </p>
         <p style="color:#706860;font-size:0.82rem;">
           Based in Soweto, Johannesburg. Open to remote, hybrid, or on-site opportunities in South Africa.
@@ -998,28 +1235,28 @@
       </div>
       <div class="contact-right">
         <a href="mailto:Sibisintombikayise7@gmail.com" class="contact-row">
-          <span class="contact-ico">✉️</span>
+          <span class="contact-ico">âœ‰ï¸</span>
           <div>
             <div class="contact-lbl">Email</div>
             <div class="contact-val">Sibisintombikayise7@gmail.com</div>
           </div>
         </a>
         <a href="tel:0734448863" class="contact-row">
-          <span class="contact-ico">📞</span>
+          <span class="contact-ico">ðŸ“ž</span>
           <div>
             <div class="contact-lbl">Phone</div>
             <div class="contact-val">073 444 8863</div>
           </div>
         </a>
         <a href="https://github.com/ntombi-hub" target="_blank" class="contact-row">
-          <span class="contact-ico">🐙</span>
+          <span class="contact-ico">ðŸ™</span>
           <div>
             <div class="contact-lbl">GitHub</div>
             <div class="contact-val">github.com/ntombi-hub</div>
           </div>
         </a>
         <a href="https://www.linkedin.com/in/ntombikayisesibisi" target="_blank" class="contact-row">
-          <span class="contact-ico">💼</span>
+          <span class="contact-ico">ðŸ’¼</span>
           <div>
             <div class="contact-lbl">LinkedIn</div>
             <div class="contact-val">linkedin.com/in/ntombikayisesibisi</div>
@@ -1032,7 +1269,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-left">Ntombikayise Faith Sibisi</div>
-    <div class="footer-right">Data Engineer & Software Developer · <span>Soweto, Johannesburg</span> · 2026</div>
+    <div class="footer-right">Data Engineer & Software Developer Â· <span>Soweto, Johannesburg</span> Â· 2026</div>
   </footer>
 
   <script>
@@ -1062,16 +1299,6 @@
     });
   </script>
 
-  <style>
-    .reveal, .about-body > *, .about-sidebar > *, .exp-item, .proj-card, .skill-block, .cert-card, .contact-row {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-    .reveal.visible, .about-body > *.visible, .about-sidebar > *.visible, .exp-item.visible, .proj-card.visible, .skill-block.visible, .cert-card.visible, .contact-row.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+
 </body>
 </html>
